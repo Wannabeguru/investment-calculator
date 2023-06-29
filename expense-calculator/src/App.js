@@ -33,9 +33,9 @@ function App() {
     <div>
       <Header />
       <Form onCalculate={calculateHandler} />
-      {/* Todo: Show below table conditionally (only once result data is available) */}
-      {/* Show fallback text if no data is available */}
-      <ResultTable />
+      {userInput &&  <ResultTable />}
+      {!userInput && <p>No investment calculated yet.</p>}
+     
     </div>
   );
 }
